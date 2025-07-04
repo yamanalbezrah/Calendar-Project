@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 
 app = Flask(__name__)
-CORS(app)
+CORS(app) 
 
 
 
@@ -33,6 +33,7 @@ def get_wednesday_in_range(date_str):
             else:
                 end_month = start_month
                 end_day = end
+            print(start_month, start_day, end_month, end_day) #remove this line just for testing
             year = 2025
             start_date = datetime.strptime(f"{start_month} {start_day} {year}", "%b %d %Y")
             end_date = datetime.strptime(f"{end_month} {end_day} {year}", "%b %d %Y")
